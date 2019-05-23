@@ -56,7 +56,8 @@
     
     NSLog(@"%ld",(long)count);
 
-    UIView * homaPageView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 20)];
+    CGFloat statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
+    UIView * homaPageView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, statusBarHeight)];
     homaPageView.backgroundColor = [UIColor colorWithRed:60.0 / 255.0 green:67.0 / 255.0 blue:97.0 / 255.0 alpha:1.0];
     [self.view addSubview:homaPageView];
 
